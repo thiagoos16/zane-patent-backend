@@ -4,8 +4,10 @@ module.exports = {
     async index(req, res) {
         const { page, limit } = req.query;
 
-        const general_orientations = await GeneralOrientations.paginate({}, { page: page, limit: parseInt(limit) });
+        //const general_orientations = await GeneralOrientations.paginate({}, { page: page, limit: parseInt(limit) });
         
+        const general_orientations = await GeneralOrientations.find();
+
         return res.json(general_orientations);
     },
 
