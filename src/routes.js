@@ -13,7 +13,7 @@ routes.post("/reset_password", AuthController.reset_password);
 routes.get("/general_orientations", GeneralOrientationsController.index);
 routes.get("/general_orientations/:id", GeneralOrientationsController.show);
 routes.post("/general_orientations", GeneralOrientationsController.create);
-routes.put("/general_orientations/:id", GeneralOrientationsController.update);
+routes.patch("/general_orientations/:id", GeneralOrientationsController.update);
 routes.delete("/general_orientations/:id", GeneralOrientationsController.destroy);
 
 module.exports = routes;
